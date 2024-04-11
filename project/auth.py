@@ -6,7 +6,7 @@ from . import db, app
 import rsa
 
 auth = Blueprint('auth', __name__)
-pubKey,privKey = rsa.newkeys(512)
+pubKey,privKey = rsa.newkeys(2048)
 
 @auth.route('/login')
 def login():
@@ -17,7 +17,6 @@ def login_post():
     email = request.form.get('email')
     password = request.form.get('password')
     password = hash_password(password)
-    print(password)
     remember = True if request.form.get('remember') else False
 
     user = User.query.filter_by(email=email).first()
