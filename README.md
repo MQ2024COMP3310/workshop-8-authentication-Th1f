@@ -15,7 +15,7 @@ Pip is the package manager for Python.  You can install the remaining packages r
 
 (NOTE: If you are using a Mac you may need to use the command pip3 instead of pip to ensure you are installing packages for python3)
 
-You should have at least the following versions installed: 
+You should have at least the following versions installeds: 
 - Python             3.9.6
 - Flask              2.2.3
 - Flask-Login        0.6.2
